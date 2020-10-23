@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Tic Tac Toe</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <header>
+      <div id="text" class="header">
+        <h1 class="header-child">
+          TIC <span id="offset" class="offset">TAC</span> TOE
+        </h1>
+      </div>
+    </header>
+    <section>
+      <div class="player-container">
+        <div class="player1-container">
+          <div class="p1Image">
+            <img
+              src="images/female.svg"
+              alt="Graphics Female"
+              height="75%"
+              width="75%"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Player 1</span>
+            </div>
+            <input
+              type="text"
+              id="p1"
+              name="p1"
+              class="form-control"
+              placeholder="Player1 Name"
+              aria-label="name"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+        </div>
+        <div class="player2-container">
+          <div class="p2Image">
+            <img
+              src="images/male.svg"
+              alt="Graphics Male"
+              height="75%"
+              width="75%"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text" id="basic-addon1">Player 1</span>
+            </div>
+            <input
+              type="text"
+              id="p2"
+              name="p2"
+              class="form-control"
+              placeholder="Player2 Name"
+              aria-label="name"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group mb-3">
+        <div class="input-group-prepend">
+          <label class="input-group-text" for="inputGroupSelect01"
+            >Choose Dimension</label
+          >
+        </div>
+        <select id="dimension" class="custom-select">
+          <option value="3">3x3</option>
+          <option value="4">4x4</option>
+          <option value="5">5x5</option>
+          <option value="6">6x6</option>
+          <option value="7">7x7</option>
+          <option value="8">8x8</option>
+          <option value="9">9x9</option>
+          <option value="10">10x10</option>
+        </select>
+      </div>
+
+      <!-- <select id="dimension">
+      Dimension
+      <option value="3">3x3</option>
+      <option value="4">4x4</option>
+      <option value="5">5x5</option>
+    </select> -->
+      <button
+        type="button"
+        id="game-start"
+        onclick="startGame()"
+        class="btn btn-outline-secondary glowButton"
+      >
+        Start Game
+      </button>
+
+      <div id="playArea" class="play-area hide">
+        <div id="left-image">
+          <img
+            src="images/male.svg"
+            alt="Graphics Male"
+            height="50%"
+            width="50%"
+          />
+          <h4 id="turn1"></h4>
+        </div>
+        <div id="game-container">
+          <!-- <div class="row">
+        <div class="cell" onclick="handleClick(this)"></div>
+        <div class="cell" onclick="handleClick(this)"></div>
+        <div class="cell" onclick="handleClick(this)"></div>
+      </div>
+      <div class="row">
+        <div class="cell" onclick="handleClick(this)"></div>
+        <div class="cell" onclick="handleClick(this)"></div>
+        <div class="cell" onclick="handleClick(this)"></div>
+      </div>
+      <div class="row">
+        <div class="cell" onclick="handleClick(this)"></div>
+        <div class="cell" onclick="handleClick(this)"></div>
+        <div class="cell" onclick="handleClick(this)"></div>
+      </div> -->
+        </div>
+        <div id="right-image">
+          <img
+            src="images/male.svg"
+            alt="Graphics Male"
+            height="50%"
+            width="50%"
+          />
+          <h4 id="turn2"></h4>
+        </div>
+      </div>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>
